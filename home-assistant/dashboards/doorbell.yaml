@@ -12,6 +12,9 @@ cards:
     cameras:
       - camera_entity: camera.doorbell
         live_provider: go2rtc
+        capabilities:
+          force:
+            - 2-way-audio
         image:
           refresh_seconds: 1
         dimensions:
@@ -44,6 +47,8 @@ cards:
         live:
           enabled: false
         clips:
+          enabled: false
+        gallery:
           enabled: false
         microphone:
           type: toggle
