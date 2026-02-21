@@ -13,6 +13,9 @@ cards:
       - camera_entity: camera.doorbell
         live_provider: go2rtc
         capabilities:
+          disable_except:
+            - live
+            - 2-way-audio
           force:
             - 2-way-audio
         image:
@@ -38,23 +41,15 @@ cards:
         - microphone
     menu:
       buttons:
-        snapshots:
-          enabled: false
         fullscreen:
-          enabled: false
-        cameras:
           enabled: false
         live:
           enabled: false
-        clips:
-          enabled: false
-        gallery:
-          enabled: false
+        mute:
+          enabled: true
         microphone:
           type: toggle
           priority: 49
-        mute:
-          enabled: true
       style: outside
       position: top
       button_size: 85
